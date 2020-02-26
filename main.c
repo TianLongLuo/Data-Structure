@@ -1,16 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
-#define Size 5
-
-typedef struct Table
-{
-    int* head;
-    int length;
-    int size;
-}table;
-
-table initTable();
-void displayTable(table t);
+#include "include/init.h"
+#include "include/add.h"
 
 int main()
 {
@@ -21,29 +12,8 @@ int main()
         b.length++;
     }
     displayTable(b);
+    b=addTable(b,3,1);
+    displayTable(b);
     system("pause");
     return 0;
-}
-
-table initTable()
-{
-    table t;
-    t.head=(int*)malloc(Size*sizeof(int));
-    if(!t.head)
-    {
-        printf("初始化失败");
-        exit(0);
-    }
-    t.length=0;
-    t.size=Size;
-    return t;
-}
-
-void displayTable(table t)
-{
-    for(int i=0;i<t.length;i++)
-    {
-        printf("%d ",t.head[i]);
-    }
-    printf("\n");
 }

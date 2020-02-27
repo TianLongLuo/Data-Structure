@@ -14,6 +14,7 @@ int main()
     for(int i=0;i<b.size;i++)
     {
         b.head[i]=i+1;
+        b.length++;
     }
     displayTable(b);
 //--------添加元素--------
@@ -22,7 +23,7 @@ int main()
     displayTable(b);
 //--------查找元素--------
     printf("select 4 position\n");
-    printf("%d",selectTable(b,4));
+    printf("%d\n",selectTable(b,4));
 //--------修改元素--------
     printf("amend 3 to 9\n");
     b=amendTable(b,3,9);

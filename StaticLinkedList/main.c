@@ -13,13 +13,15 @@ typedef struct
 void reserveArr(component* array);     //生成并连接备用链表
 int mallocArr(component* array);      //分配一个数据节点
 int initArr();      //初始化链表
-void display(component* array,int body);  //打印链表
+void display(component* array,int body);  //打印数据链表
+void displayAll(component* array);      //打印整条链表
 
 int main()
 {
     component array[maxSize];
     int body=initArr(array);
     display(array,body);
+    displayAll(array);
     system("pause");
 }
 
@@ -70,4 +72,13 @@ void display(component* array,int body)
         tempBody=array[tempBody].cur;
     }   
     printf("%d--%d  \n",array[tempBody].elem,array[tempBody].cur);
+}
+
+void displayAll(component* array)
+{
+    for(int i=0;i<maxSize;i++)
+    {
+        printf("%d--%d  ",array[i].elem,array[i].cur);
+    }
+    printf("\n");
 }

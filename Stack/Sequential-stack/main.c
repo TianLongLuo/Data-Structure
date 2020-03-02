@@ -19,7 +19,7 @@ int main()
     {
         top=pop(a,top);
     }
-    
+    top=pop(a,top);
 
     system("pause");
     return 0;
@@ -37,7 +37,7 @@ int pop(int* a,int top)
 {
     if(-1==top)
     {
-        printf("Empty stack!");
+        printf("Empty stack!\n");
         return -1;
     }
     printf("pop up: %d\n",a[top]);

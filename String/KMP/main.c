@@ -31,6 +31,7 @@ void Next(int* next,char* T)
             {
                 i=next[i-1];
             }else{
+                next[j]=0;
                 j++;
             }
         }
